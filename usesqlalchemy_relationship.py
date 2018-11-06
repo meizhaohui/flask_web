@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 @Author  : 梅朝辉 Meizhaohui
-@Email   : meizhaohui@jcdz.cc
+@Email   : mzh.whut@gmail.com
 
 @Time    : 2018/11/1 23:54
 @File    : usesqlalchemy_relationship.py
