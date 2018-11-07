@@ -21,6 +21,7 @@ from sqlalchemy import Boolean
 from sqlalchemy import Text
 from sqlalchemy import and_
 from sqlalchemy import or_
+from sqlalchemy import ForeignKey
 
 # create_engine() 会返回一个数据库引擎
 engine = create_engine(
@@ -64,6 +65,8 @@ class Article(Base):
     is_active = Column(Boolean, server_default='1')
 
 
+# 删除所有数据表
+Base.metadata.drop_all(engine)
 # 创建数据表
 # Base.metadata.create_all(engine)会找到Base的所有子类，并在数据库中建立这些表
 Base.metadata.create_all(engine)

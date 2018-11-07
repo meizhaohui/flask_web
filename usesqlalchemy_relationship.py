@@ -9,7 +9,7 @@
 @Interpreter: Python3.6.2
 @Software: PyCharm
 
-@Description:  使用sqlalchemy中的relationship建立双向关系
+@Description:  使用sqlalchemy中的relationship backref建立隐式双向指向-一对多关系
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, relationship
@@ -46,7 +46,7 @@ class User(Base):
     username = Column(String(50), nullable=False)
     # 字段email，邮箱
     email = Column(String(50))
-    # 字段is_active,是否激活，
+    # 字段is_active,是否激活
     is_active = Column(Boolean, default=True)
 
     def __repr__(self):
